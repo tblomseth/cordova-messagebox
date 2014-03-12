@@ -8,7 +8,7 @@
 
 	<!--asset src="www/MessageBox.js" target="MessageBox.js" /-->
 	<js-module src="www/MessageBox.js">
-		<clobbers target="org.apache.cordova.plugins.MessageBox" />
+		<clobbers target="window.plugins.messageBox" />
 	</js-module>
 
 	<dependency id="org.apache.cordova.core.dialogs"/>
