@@ -43,9 +43,9 @@
 	<platform name="ios">
 		<plugins-plist key="MessageBox" />
 
-		<header-file src="MessageBox.h" />
+		<header-file src="src/ios/MessageBox.h" />
 
-		<source-file src="MessageBox.m" />
+		<source-file src="src/ios/MessageBox.m" />
 	</platform>
 
 	<!-- blackberry10 -->
