@@ -9,7 +9,8 @@
 (function(cordova) {
 
 	var exec = cordova.require("cordova/exec"),
-		_ID = "org.apache.cordova.plugins.MessageBox";
+		_ID = "org.apache.cordova.plugins.MessageBox",
+        serviceName = 'MessageBox';
 
 	function MessageBox() {}
 
@@ -76,12 +77,7 @@
 			if(typeof callback == 'function') callback.call(scope, button, value);
 		};
 
-		var cordova_callback = function(result) {
-            navigator.notification.prompt(config.message, _callback, config.title, config.noButtonTitle + ', ' + config.yesButtonTitle, "Prompt dialog");
-        };
-
-		exec(cordova_callback, null, _ID, 'prompt', [config]);
-		// return cordova.exec(_callback, _callback, 'MessageBox', 'prompt', [config]);
+        exec(_callback, _callback, serviceName, "prompt", [ config ]);
 	};
 
 	cordova.addConstructor(function() {
