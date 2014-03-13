@@ -5,9 +5,9 @@ by [Olivier Louvignes](http://olouv.com)
 
 * This plugin provides an unified API to use the `UIAlertView` native component from iOS.
 
-* This plugin is built for Cordova >= v2.1.0 with ARC.
+* This plugin is built for Cordova >= 3 with ARC.
 
-* Compared to the `iPhone/Prompt` plugin, it is more documented & simpler to understand. It does also provide new options for prompt (message, multiline, input type password).
+* Compared to the `iPhone/Prompt` plugin, it is more documented & simpler to understand. It also provides options for prompt (message, multiline, input type password).
 
 * There is a `Sencha Touch 2.0` plugin to easily leverage this plugin [here](https://github.com/mgcrea/sencha-touch-plugins/blob/master/CordovaMessageBox.js)
 
@@ -15,9 +15,16 @@ by [Olivier Louvignes](http://olouv.com)
 
 ## PLUGIN SETUP FOR IOS ##
 
-Using this plugin requires [Cordova iOS](https://github.com/apache/incubator-cordova-ios).
+Using this plugin requires [Cordova](https://cordova.apache.org).
 
-1. Make sure your Xcode project has been [updated for Cordova](https://github.com/apache/incubator-cordova-ios/blob/master/guides/Cordova%20Upgrade%20Guide.md)
+### Using Cordova CLI ###
+This install mode requires Cordova CLI and knowledge of how to use it. 
+
+1. In your favorite shell issue the command `cordova plugin add https://github.com/tblomseth/cordova-messagebox`
+
+### Manual install ###
+
+1. Make sure your Xcode project has been [updated for Cordova 3](http://docs.phonegap.com/en/edge/guide_platforms_ios_upgrading.md.html#Upgrading%20iOS)
 2. Rename the `src/ios` folder to `MessageBox`, drag and drop it from Finder to your Plugins folder in XCode, using "Create groups for any added folders"
 3. Add the .js files to your `www` folder on disk, and add reference(s) to the .js files using `<script>` tags in your html file(s)
 
@@ -25,7 +32,7 @@ Using this plugin requires [Cordova iOS](https://github.com/apache/incubator-cor
     `<script type="text/javascript" src="/js/plugins/MessageBox.js"></script>`
 
 
-4. Add new entry with key `MessageBox` and value `MessageBox` to `Plugins` in `Cordova.plist/Cordova.plist`
+4. Add new entry with key `MessageBox` and value `MessageBox` to `Plugins` in `Cordova.plist/Cordova.plist` (The Cordova.plist file has been deprecated with CDV 3). Under Cordova 3 add plugin to config.xml using info from plugin.xml. 
 
 ## JAVASCRIPT INTERFACE (IOS) ##
 
@@ -64,9 +71,9 @@ Using this plugin requires [Cordova iOS](https://github.com/apache/incubator-cor
 
 Patches welcome! Send a pull request. Since this is not a part of Cordova Core (which requires a CLA), this should be easier.
 
-Post issues on [Github](https://github.com/mgcrea/cordova-messagebox/issues)
+Post issues on [Github](https://github.com/tblomseth/cordova-messagebox/issues)
 
-The latest code (my fork) will always be [here](https://github.com/mgcrea/cordova-messagebox/tree/master)
+Olivier Louvignes's latest code (his fork) will always be [here](https://github.com/mgcrea/cordova-messagebox/tree/master)
 
 ## LICENSE ##
 
@@ -97,6 +104,8 @@ The latest code (my fork) will always be [here](https://github.com/mgcrea/cordov
 Contributors :
 
 * [Olivier Louvignes](http://olouv.com)
+* [timwindsor](https://github.com/timwindsor)
+* [tblomseth](https://github.com/tblomseth)
 
 Inspired by :
 
