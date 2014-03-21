@@ -5,3 +5,4 @@ xcuserdata
 samples/ios/MessageBox/
 
 !.gitignore
+.idea
