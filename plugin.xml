@@ -10,7 +10,7 @@
         <clobbers target="window.plugins.messageBox"/>
     </js-module>
 
-    <dependency id="org.apache.cordova.core.dialogs"/>
+    <dependency id="org.apache.cordova.dialogs"/>
 
     <!-- android -->
     <platform name="android">
